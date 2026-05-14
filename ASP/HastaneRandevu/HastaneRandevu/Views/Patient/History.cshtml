@@ -1,0 +1,60 @@
+@model HastaneRandevu.Models.Patient
+
+@{
+    ViewData["Title"] = "Hasta Geçmişi";
+}
+
+<div class="container mt-5">
+    <div class="card border-0 shadow-sm mb-4" style="background-color: #f0f8ff;">
+        <div class="card-body">
+            <h2 class="text-primary">👤 @Model.FullName</h2>
+            <p class="text-muted mb-0">
+                <strong>TC Kimlik:</strong> @Model.TCNo | 
+                <strong>Kan Grubu:</strong> <span class="badge bg-danger" style="font-size: 14px;">@Model.BloodType</span>
+            </p>
+        </div>
+    </div>
+
+    <h4 class="mb-3" style="color: #2c3e50;">Geçmiş Randevular ve İşlemler</h4>
+
+    @if (!Model.Appointments.Any())
+    {
+        <div class="alert alert-warning">Hastaya ait geçmiş randevu kaydı bulunmamaktadır.</div>
+    }
+    else
+    {
+        <div class="accordion shadow-sm" id="historyAccordion">
+            @foreach (var app in Model.Appointments.OrderByDescending(a => a.Date))
+            {
+                <div class="accordion-item mb-2 border-0 rounded">
+                    <h2 class="accordion-header" id="heading-@app.ID">
+                        <button class="accordion-button collapsed bg-light text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@app.ID">
+                            <strong>📅 @app.Date.ToString("dd.MM.yyyy")</strong> &nbsp; - @app.Doctor.Clinic.Name (@app.Doctor.FullName)
+                        </button>
+                    </h2>
+                    <div id="collapse-@app.ID" class="accordion-collapse collapse" data-bs-parent="#historyAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Hastanın Şikayeti:</strong> @app.Complaint</p>
+                            <hr />
+                            @if (app.Prescription != null)
+                            {
+                                <div class="alert alert-success mb-0 border-0">
+                                    <strong>💊 Reçete Edilen İlaçlar:</strong> @app.Prescription.MedicineList <br/>
+                                    <strong class="mt-2 d-inline-block">Kullanım Talimatı:</strong> @app.Prescription.Instructions
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="text-muted fst-italic">Bu randevu için henüz reçete yazılmamış.</div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    
+    <div class="mt-4">
+        <a href="/Clinic" class="btn btn-outline-secondary">Kliniklere Dön</a>
+    </div>
+</div>

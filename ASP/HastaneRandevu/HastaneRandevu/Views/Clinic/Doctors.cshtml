@@ -1,0 +1,51 @@
+@model IEnumerable<HastaneRandevu.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Doktor Seçimi";
+    // Listedeki ilk doktorun klinik adını başlık için alıyoruz
+    var clinicName = Model.FirstOrDefault()?.Clinic?.Name ?? "Seçili Klinik";
+}
+
+<div class="container mt-5">
+    <a href="/Clinic" class="text-decoration-none text-secondary mb-3 d-inline-block">
+        &larr; Kliniklere Dön
+    </a>
+    
+    <h2 class="text-center mb-4" style="color: #2c3e50;">
+        <span class="text-primary">@clinicName</span> Doktorları
+    </h2>
+    <p class="text-center text-muted mb-5">Lütfen muayene olmak istediğiniz doktoru seçin</p>
+
+    <div class="row">
+        @if (!Model.Any())
+        {
+            <div class="alert alert-warning text-center">Bu klinikte henüz görevli doktor bulunmamaktadır.</div>
+        }
+        else
+        {
+            @foreach (var doc in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0 h-100" style="border-left: 5px solid #2ecc71 !important;">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light rounded-circle p-3 me-3">
+                                    <h4 class="mb-0 text-secondary">👨‍⚕️</h4>
+                                </div>
+                                <div>
+                                    <h5 class="card-title text-dark mb-1">@doc.FullName</h5>
+                                    <span class="badge bg-secondary">@doc.Title</span>
+                                </div>
+                            </div>
+                            
+                            <hr />
+                            <a href="/Appointment/Create?doctorId=@doc.ID" class="btn btn-outline-primary w-100">
+                                Randevu Al
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

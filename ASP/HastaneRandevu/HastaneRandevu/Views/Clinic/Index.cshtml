@@ -1,0 +1,34 @@
+@model IEnumerable<HastaneRandevu.Models.Clinic>
+
+@{
+    ViewData["Title"] = "Kliniklerimiz";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4" style="color: #2c3e50;">
+        <i class="fa-solid fa-hospital"></i> Hastanemize Hoş Geldiniz
+    </h2>
+    <p class="text-center text-muted mb-5">Lütfen randevu almak istediğiniz kliniği seçin</p>
+
+    <div class="row">
+        @foreach (var clinic in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100 border-0" style="background-color: #f8f9fa;">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <span class="badge bg-info text-dark" style="font-size: 14px;">Kat: @clinic.Floor</span>
+                        </div>
+                        <h4 class="card-title text-primary">@clinic.Name</h4>
+                        <p class="card-text text-secondary">@clinic.Specialty</p>
+                        
+                        <hr />
+                        <a href="/Clinic/Doctors?clinicId=@clinic.ID" class="btn btn-outline-success w-100">
+                            Doktor Seçimi Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

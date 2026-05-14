@@ -1,0 +1,37 @@
+@model HastaneRandevu.Models.Appointment
+
+@{
+    ViewData["Title"] = "Randevu Oluştur";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="font-weight-light my-2">Randevu Formu</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/Appointment/Create" method="post">
+                        <input type="hidden" name="DoctorID" value="@ViewBag.DoctorId" />
+                        <input type="hidden" name="PatientID" value="@ViewBag.PatientId" />
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" value="@ViewBag.DoctorName" disabled />
+                            <label>Seçilen Doktor</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <textarea name="Complaint" class="form-control" style="height: 100px" required></textarea>
+                            <label>Şikayetiniz (Belirtiler)</label>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg">Randevuyu Onayla</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
