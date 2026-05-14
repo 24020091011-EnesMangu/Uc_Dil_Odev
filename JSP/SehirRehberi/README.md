@@ -30,7 +30,6 @@ PostgreSQL üzerinde kurgulanan ilişkisel tablo yapısı (Cities, Places, Event
 ## 🛠️ Kurulum ve Çalıştırma
 
 1. **Veritabanı Kurulumu:** - PostgreSQL üzerinde `sehir_rehberi` adında bir veritabanı oluşturun.
-   - `database.sql` dosyasındaki sorguları çalıştırarak tabloları ve test verilerini oluşturun.
 
 2. **Kütüphane Bağlantısı:**
    - `postgresql-42.x.x.jar` dosyasını projenin `Libraries` kısmına (NetBeans/IntelliJ) ekleyin.
