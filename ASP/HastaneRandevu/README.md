@@ -22,43 +22,25 @@ Bu proje, ASP.NET Core MVC mimarisi ve Entity Framework Core (Code-First) kullan
 
 
 
-\### 1. Klinik Listesi (Ana Sayfa)
-
+### 1. Klinik Listesi (Ana Sayfa)
 Hastanede bulunan kliniklerin listelendiği ve seçim yapıldığı giriş ekranı.
+![Klinik Listesi](./anasayfa.png)
 
-!\[Klinik Listesi](./anasayfa.png)
-
-
-
-\### 2. Doktor Seçimi
-
+### 2. Doktor Seçimi
 Seçilen kliniğe (clinicId) bağlı olarak çalışan uzman doktorların filtrelenmiş listesi.
+![Doktor Seçimi](./doktorlar.png)
 
-!\[Doktor Seçimi](./doktorlar.png)
-
-
-
-\### 3. Randevu Oluşturma Formu
-
+### 3. Randevu Oluşturma Formu
 Seçili doktor için hasta bilgilerinin (patientId) ve şikayetin girilerek POST edildiği ekran.
+![Randevu Formu](./randevu.png)
 
-!\[Randevu Formu](./randevu.png)
-
-
-
-\### 4. Hasta Geçmişi ve Reçeteler
-
+### 4. Hasta Geçmişi ve Reçeteler
 Entity Framework Include/ThenInclude metodları ile hastanın geçmiş randevularının, doktor/klinik bilgilerinin ve yazılan reçetelerin listelendiği detay ekranı.
+![Hasta Geçmişi](./gecmis.png)
 
-!\[Hasta Geçmişi](./gecmis.png)
-
-
-
-\### 5. Veritabanı Diyagramı (Code-First)
-
+### 5. Veritabanı Diyagramı (Code-First)
 C# Modellerinden türetilen ve MS SQL üzerinde oluşan ilişkisel tablo yapısı.
-
-!\[Veritabanı](./veritabani.png)
+![Veritabanı](./veritabani.png)
 
 
 
