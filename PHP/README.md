@@ -28,7 +28,7 @@ Projenin çalışır halini ve arayüz tasarımını gösteren ekran görüntül
 ![Film Detay](detay.png)
 
 * Kategori Filtreleme ve Yönetim Paneli
-![Kategori ve Yönetim](yonetim.png)
+![Kategori ve Yönetim](yönetim.png)
 
 * Veri Tabanı Tabloları
 ![Tablolar](veri_tabani.png)
