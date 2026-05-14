@@ -13,19 +13,19 @@ Bu proje, JavaServer Pages (JSP) teknolojisi ve PostgreSQL veritabanı kullanıl
 
 ### 1. Ana Sayfa (Şehir Listesi)
 Sistemdeki tüm şehirlerin bölge ve nüfus bilgileriyle birlikte listelendiği giriş ekranıdır.
-![Ana Sayfa](./anasayfa.png)
+![Ana Sayfa](.SehirRehberi/anasayfa.png)
 
 ### 2. Şehir Detay Sayfası
 Seçilen şehre ait gezilecek mekanların ve o şehirde uzmanlaşmış rehberlerin listelendiği alandır.
-![Şehir Detay](./detay.png)
+![Şehir Detay](.SehirRehberi/detay.png)
 
 ### 3. Yeni Mekan Ekleme
 Belirli bir şehre bağlı kalarak sisteme yeni turistik mekanların veya restoranların kaydedildiği form ekranıdır.
-![Yeni Mekan Ekle](./new_event.png)
+![Yeni Mekan Ekle](.SehirRehberi/new_event.png)
 
 ### 4. Veritabanı Yapısı
 PostgreSQL üzerinde kurgulanan ilişkisel tablo yapısı (Cities, Places, Events, Guides, City_Guide).
-![Veritabanı Yapısı](./veri_tabanı.png)
+![Veritabanı Yapısı](.SehirRehberi/veri_tabanı.png)
 
 ## 🛠️ Kurulum ve Çalıştırma
 
