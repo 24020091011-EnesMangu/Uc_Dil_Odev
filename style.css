@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f1014;
+    color: #e1e1e1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Üst Menü (Navbar) */
+.navbar {
+    background-color: #1a1c23;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e50914;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar .logo span {
+    color: #e50914;
+}
+
+.nav-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Ana Taşıyıcı */
+.container {
+    padding: 40px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Film Kartları (Grid Yapısı) */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    background-color: #1a1c23;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2a2d3a;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(229, 9, 20, 0.15);
+    border-color: #e50914;
+}
+
+.movie-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+}
+
+.movie-card h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.movie-card p {
+    margin: 8px 0;
+    color: #8a8d9b;
+    font-size: 15px;
+}
+
+.movie-card strong {
+    color: #b3b3b3;
+}
+
+/* Tablolar ve Detay Kutuları */
+.detail-box {
+    background-color: #1a1c23;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #2a2d3a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a1c23;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #2a2d3a;
+}
+
+th {
+    background-color: #e50914;
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #242731;
+}
+
+/* Butonlar */
+.btn {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b80710;
+}
+
+.btn-secondary {
+    background-color: #2a2d3a;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #3f4458;
+}/* Afiş Tasarımları */
+.movie-poster {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Film Detay Sayfası Afiş Düzeni */
+.detail-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.detail-poster {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid #2a2d3a;
+}
+
+.detail-info {
+    flex: 1;
+}
