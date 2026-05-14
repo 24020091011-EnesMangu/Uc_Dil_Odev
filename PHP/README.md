@@ -13,7 +13,7 @@ Bu proje, web programlama mimarilerini karşılaştırmalı olarak incelemek ama
 
 ## Kullanılan Teknolojiler
 
-* **Backend:** PHP 8.x (Veritabanı bağlantısı için PDO kullanılmıştır)
+* **Backend:** PHP (Veritabanı bağlantısı için PDO kullanılmıştır)
 * **Veritabanı:** MySQL (WAMP Server kullanılarak yapılandırılmıştır)
 * **Frontend:** HTML5, CSS3
 
